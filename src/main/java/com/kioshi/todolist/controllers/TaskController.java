@@ -66,6 +66,7 @@ public class TaskController {
         return ResponseEntity.status(HttpStatus.OK).body(response);
     }
 
+
     // DELETE TASK
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<DeleteTaskResponseDTO> deleteTask(@PathVariable UUID id, HttpServletRequest request){
@@ -80,6 +81,7 @@ public class TaskController {
         DeleteTaskResponseDTO response = this.taskService.deleteTask(new DeleteTaskRequestDTO(UserId, id));
         return ResponseEntity.status(HttpStatus.OK).body(response);
     }
+
 
     // DELETE ALL TASKS FROM USER
     @DeleteMapping("/deleteAll")
@@ -96,6 +98,7 @@ public class TaskController {
         return ResponseEntity.status(HttpStatus.OK).body(response);
     }
 
+    
     //UPDATE TASK
     @PatchMapping("/update")
     public ResponseEntity<UpdateTaskResponseDTO> updateTask(@Valid @RequestBody UpdateTaskRequestDTO updateTaskRequestDTO){
