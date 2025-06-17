@@ -15,5 +15,5 @@ public class UpdateTaskResponseDTO {
 
     private String name;
     private String content;
-    private boolean completed;
+    private Boolean completed;
 }

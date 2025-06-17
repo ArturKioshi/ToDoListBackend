@@ -9,5 +9,5 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class DeleteAllTasksResponseDTO {
     
-    private boolean deleted;
+    private Boolean deleted;
 }
