@@ -112,7 +112,8 @@ public class UserService {
             user.getUsername(),
             user.getEmail(),
             user.getPhoneNumber(),
-            user.getCreatedAt()
+            user.getCreatedAt(),
+            user.getPermission()
         ); 
     }
 
