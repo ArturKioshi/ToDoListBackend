@@ -103,8 +103,17 @@ public class UserService {
         }
 
         String role = "ROLE_" + user.getPermission().name();
+        String token = this.jwtProvider.createToken(user.getId(), role);
 
-        return new LoginUserResponseDTO(this.jwtProvider.createToken(user.getId(), role)); 
+        return new LoginUserResponseDTO(
+            token, 
+            user.getId(),
+            user.getName(),
+            user.getUsername(),
+            user.getEmail(),
+            user.getPhoneNumber(),
+            user.getCreatedAt()
+        ); 
     }
 
     // GET PROFILE USER
