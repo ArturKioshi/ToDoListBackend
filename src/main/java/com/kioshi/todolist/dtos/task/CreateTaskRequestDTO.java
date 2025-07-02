@@ -13,6 +13,5 @@ public class CreateTaskRequestDTO {
     @NotBlank(message = "O nome é obrigatório")
     private String name;
 
-    @NotBlank(message = "O conteúdo é obrigatório")
     private String content;
 }

@@ -42,6 +42,7 @@ public class TaskService {
         .orElseThrow(() -> {
             throw new UserNotFoundException();
         });
+        
 
         TaskEntity task = TaskEntity.builder()
         .name(createTaksRequestDTO.getName())

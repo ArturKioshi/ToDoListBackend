@@ -22,4 +22,5 @@ public class LoginUserResponseDTO {
     private String phoneNumber;
     private LocalDateTime createdAt;
     private Permission permission;
+    private Boolean verified;
 }
